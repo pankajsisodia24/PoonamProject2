@@ -1,0 +1,300 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #007bff, #28a745, #ffc107); /* Blue, Green, Yellow gradient */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure gradient covers full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="file"],
+input[type="datetime-local"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 10px; /* Add some space below form elements */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px; /* Add some space above buttons */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.dashboard-container {
+    display: flex;
+    flex: 1; /* Allow dashboard to take up remaining space */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar ul li:last-child a {
+    border-bottom: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for content area */
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.add-department-form, .add-user-form, .add-course-form, .add-exam-form, .add-question-form, .add-option-form, .assign-course-form, .schedule-exam-form, .edit-department-form, .edit-user-form, .edit-course-form, .edit-exam-form, .edit-question-form, .upload-form, .filter-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.course-item, .question-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.course-item h3, .question-item h3 {
+    margin-top: 0;
+}
+
+.options label {
+    margin-bottom: 5px;
+}
+
+#timer {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #dc3545; /* Red color for timer */
+}
+
+/* Dashboard Widgets Styling */
+.dashboard-widgets {
+    display: grid; /* Use CSS Grid for better alignment */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.widget {
+    width: 100%; /* Take full width of grid column */
+    height: 180px; /* Fixed height for square-like appearance */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.widget h4 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.widget p {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Specific Widget Gradients */
+.total-users {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple to Blue */
+}
+
+.total-departments {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Light Blue to Dark Blue */
+}
+
+.total-courses {
+    background: linear-gradient(to right, #13547a, #80d0c7); /* Dark Teal to Light Teal */
+}
+
+.scheduled-exams {
+    background: linear-gradient(to right, #f7b733, #fc4a1a); /* Orange to Red */
+}
+
+/* Header Styling */
+.app-header {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* User Dashboard Widgets */
+.total-attempted-exams {
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Green */
+}
+
+.average-score {
+    background: linear-gradient(to right, #FFC107, #FF9800); /* Amber */
+}
+
+.training-progress-widget {
+    background: linear-gradient(to right, #00BCD4, #0097A7); /* Cyan */
+    height: 180px; /* Set a fixed height to match other widgets */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the height */
+}
+
+.training-progress-widget h4 {
+    margin-bottom: 5px; /* Adjust margin for better spacing */
+}
+
+.training-progress-widget p {
+    font-size: 1.2em; /* Adjust font size for better fit */
+    margin-top: 10px; /* Space above the text */
+}
+
+.progress-bar-container {
+    width: 80%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+/* Footer Styling */
+.app-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333; /* Dark background */
+    color: #fff;
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}

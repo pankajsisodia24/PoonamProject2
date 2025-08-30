@@ -1,0 +1,1 @@
+ALTER TABLE `course_materials` ADD `section_name` VARCHAR(255) NULL AFTER `file_path`;

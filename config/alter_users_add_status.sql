@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `status` ENUM('active','inactive') NOT NULL DEFAULT 'active' AFTER `role`;

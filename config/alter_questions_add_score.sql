@@ -1,0 +1,1 @@
+ALTER TABLE `questions` ADD `score` INT NOT NULL DEFAULT 1 AFTER `question_image_path`;

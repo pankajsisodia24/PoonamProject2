@@ -1,0 +1,1 @@
+ALTER TABLE `options` ADD `option_image_path` VARCHAR(255) NULL AFTER `option_text`;

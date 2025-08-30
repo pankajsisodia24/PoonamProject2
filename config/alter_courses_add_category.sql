@@ -1,0 +1,1 @@
+ALTER TABLE `courses` ADD `category` VARCHAR(255) NULL AFTER `description`;
